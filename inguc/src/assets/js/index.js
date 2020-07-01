@@ -1,4 +1,5 @@
 import './assets';
+import './scripts';
 import '../styles/index.scss';
 
 // eslint-disable-next-line no-console
