@@ -2,40 +2,38 @@ const KoaRouter = require('koa-router');
 
 const router = new KoaRouter();
 
+const fetch = require("node-fetch");
+
 async function loadEvent(ctx, next) {
   ctx.state.event = await ctx.orm.event.findByPk(ctx.params.id);
   return next();
 }
 
 router.get('events.list', '/', async (ctx) => {
-  const eventsList = [{
-    "id": 38,
-    "name": "Pirinha",
-    "organizer": 2,
-    "date": "2020-06-19T04:50:41.575Z",
-    "place": "Cajon del Maipo",
-    "category": "carrete",
-    "banner": "https://yplqsmdlg-images-1.s3.amazonaws.com/not_yet.png",
-    "createdAt": "2020-06-19T04:50:41.575Z",
-    "updatedAt": "2020-06-19T04:50:41.575Z"
-},
-{
-    "id": 39,
-    "name": "Cine",
-    "organizer": 4,
-    "date": "2020-06-19T04:50:41.575Z",
-    "place": "Patio de ingenieria",
-    "category": "cultura",
-    "banner": "https://yplqsmdlg-images-1.s3.amazonaws.com/not_yet.png",
-    "createdAt": "2020-06-19T04:50:41.575Z",
-    "updatedAt": "2020-06-19T04:50:41.575Z"
-}]
+
+    const request = async () => {
+        const url_api = "http://localhost:3000/events";
+        const response = await fetch(url_api, { 
+          
+            // Adding method type 
+            method: "GET", 
+
+            // Adding headers to the request 
+            headers: { 
+                "Accept": "application/json;",
+                "Content-type": "application/json;"
+            } 
+        })
+        const data_json = await response.json();
+        return data_json;
+    }
 
   switch (ctx.accepts(['json', 'html'])) {
-    case 'json':
-      ctx.body = eventsList;
-      break;
+    // case 'json':
+    //   ctx.body = eventsList;
+    //   break;
     case 'html':
+      const eventsList = await request();
       await ctx.render('events/index', {
         eventsList,
         profilePath: (organizer) => ctx.router.url('users.profile',{ id: organizer }),

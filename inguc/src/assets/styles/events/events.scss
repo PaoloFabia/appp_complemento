@@ -1,0 +1,121 @@
+@import "./variables";
+
+//Este contiene la info arriba
+.cabeza-contenedor{
+    position: relative;
+    left: 0px;
+
+    background-color: transparent;
+
+
+    #informacion-extra{
+        background-color: $color-body-fondo;
+        // links mismos
+        p{
+            position: relative;
+            color: white;
+            background-color: $color-body-fondo;
+        }
+        a, img{
+            position: absolute;
+            left: 75px;
+            top:15px;
+
+            width:45px;
+            height:45px;
+        }
+    }
+
+}
+
+//Este contiene a todos los items a rendear
+.cuerpo-contenedor{
+    // background-color: lawngreen;
+    background-color: $color-body-fondo;
+    padding-left: 0;
+    justify-content: space-evenly;
+
+
+
+}
+
+.contenedor-item{
+    display: inline-block;
+    background-color: $color-body-fondo;
+    min-width: 320px;
+    max-width: 380px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin: 0 auto;
+
+    .divnombre, h3{
+        text-align: center;
+        text-shadow: 2px 2px 4px #1c1b1b;
+        font-weight:  bolder;
+        text-transform: capitalize;
+        font-family: "Poppins";
+        color: white;
+        font-size: 48px;
+        line-height: 60px;
+    }
+
+    .item-imagenes{
+        display: inline-block;
+
+        .acciones{
+            #eliminar, input{
+                position: absolute;
+                left: 275px;
+                top: $margenArribaX;
+
+
+                width:30px;
+                height:30px;
+
+                background-color: transparent;
+            }
+            #editar, img{
+                position: absolute;
+                left: 275px;
+                top: $margenArribaEdit;
+
+                width:60px;
+                height:60px;
+                background-color: transparent;
+            }
+
+        }
+    }
+
+    #imagen-objeto{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #imagen-objeto, img{
+
+        // background-color: green;
+        background-color: $color-body-fondo;
+        vertical-align: middle;
+        margin-left: 5px;
+        margin-top: 10px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+
+
+        width:300px;
+        height:300px;
+
+    }
+
+    .piso{
+        background: $color-body-fondo;
+        text-align: left;
+        margin-left: 100px ;
+        // text-color: white;
+        .hide {
+            display: none;
+        }
+        
+    }
+}
