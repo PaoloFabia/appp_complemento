@@ -1,0 +1,63 @@
+<div class="cabeza-contenedor">
+  <div id="titulo-contenedor">
+    <h1>Usuarios</h1>
+  </div>
+
+  <div id="informacion-extra">
+    <% if (!usersList.length) { %>
+      <p>Aún no hay usuarios registrados</p>
+
+    <% } else { %>
+  </div>
+</div>
+
+<div class="cuerpo-contenedor">
+
+
+
+
+  <% usersList.forEach((user)  => { %>
+
+    <div class="contenedor-item">
+
+      <div class="divnombre">
+        <h3>
+          <%= user.name %>
+        </h3>
+      </div>
+
+      <div class="item-imagenes" id="imagen-objeto">
+        <a href="<%= profilePath(user) %>">
+          <img src="<%=user.image%>">
+        </a>
+
+      </div>
+
+      
+
+      <div class="piso">
+
+
+
+
+          <div class="div-nombre"> Nombre: <%= user.name %></div>
+          <div class="div-stock"> Posicion: <%= user.position %></div>
+          <div class="div-stock"> Email: <%= user.email %></div>
+          <div class="div-stock"> Telefono: <%= user.phone %></div>
+          <div class="div-stock"> Tipo: <%= user.type %></div>
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+    <% }) %>
+
+</div>
+
+
+    <% }%>

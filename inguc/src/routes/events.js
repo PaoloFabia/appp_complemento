@@ -11,9 +11,10 @@ async function loadEvent(ctx, next) {
 
 router.get('events.list', '/', async (ctx) => {
 
+    // Solicitamos la data de la API de nuestra CAi App
     const request = async () => {
-        const url_api = "http://localhost:3000/events";
-        const response = await fetch(url_api, { 
+        const url_api = "http://localhost:3000";
+        const response = await fetch(url_api + "/events", { 
           
             // Adding method type 
             method: "GET", 
@@ -29,9 +30,6 @@ router.get('events.list', '/', async (ctx) => {
     }
 
   switch (ctx.accepts(['json', 'html'])) {
-    // case 'json':
-    //   ctx.body = eventsList;
-    //   break;
     case 'html':
       const eventsList = await request();
       await ctx.render('events/index', {
