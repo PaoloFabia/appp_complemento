@@ -6,30 +6,31 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style >
+  h2{
+    font-size: 60px;
+    font-weight: bold;
+  }
+  .bajada{
+    font-size: 25px;
+    font-style:italic;
+  }
+</style>
 <body id="myPage">
 
-<!-- Sidebar on click -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
-    <i class="fa fa-remove"></i>
-  </a>
-  <a href="#" class="w3-bar-item w3-button">Link 1</a>
-  <a href="#" class="w3-bar-item w3-button">Link 2</a>
-  <a href="#" class="w3-bar-item w3-button">Link 3</a>
-  <a href="#" class="w3-bar-item w3-button">Link 4</a>
-  <a href="#" class="w3-bar-item w3-button">Link 5</a>
-</nav>
 
 <!-- Navbar -->
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>ING UC</a>
+  <a href="#" class="w3-bar-item w3-button w3-yellow"><i class="fa fa-home w3-margin-right"></i>ING UC</a>
   <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Noticias</a>
   <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Grupos</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+  <a href="#directorio" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Directorio</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contacto</a>
 
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-yellow" title="Search"><i class="fa fa-search"></i></a>
  </div>
 
   <!-- Navbar on small screens -->
@@ -43,34 +44,34 @@
 
 <!-- Image Header -->
 <div class="w3-display-container w3-animate-opacity">
-  <img src="https://app-inguc.s3.amazonaws.com/header-bg.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+  <img src="https://app-inguc.s3.amazonaws.com/header-bg.jpg" alt="boat" style="width:100%;min-height:350px;max-height:800px;">
 </div>
 
 
 <!-- Team Container -->
 <div class="w3-container w3-padding-64 w3-center" id="team">
 <h2>NOTICIAS</h2>
-<p>Qué está sucediendo en ingeniería UC</p>
+<p class="bajada">Qué está sucediendo en ingeniería UC</p>
 
-<div class="w3-row"><br>
+<div class="w3-center w3-row "><br>
 
-<div class="w3-quarter">
-  <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Johnny Walker</h3>
-  <p>Web Designer</p>
-</div>
+  <div class="w3-quarter">
+    <img src="https://app-inguc.s3.amazonaws.com/covid.jpg" alt="Boss" style="width:45%" class="">
+    <h3>Proyectos COVID-19</h3>
+    <p>Académicos y estudiantes lideran proyectos para combatir la pandemia.</p>
+  </div>
 
-<div class="w3-quarter">
-  <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Rebecca Flex</h3>
-  <p>Support</p>
-</div>
+  <div class="w3-quarter">
+    <img src="https://app-inguc.s3.amazonaws.com/proximo-semestre.jpg" alt="Boss" style="width:45%" class="">
+    <h3>Lineamientos segundo semestre</h3>
+    <p>Revisa las medidas propuestas de rectoría para enfrentar el segundo período académico.</p>
+  </div>
 
-<div class="w3-quarter">
-  <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Jan Ringo</h3>
-  <p>Boss man</p>
-</div>
+  <div class="w3-quarter">
+    <img src="https://app-inguc.s3.amazonaws.com/gabriel.jpg" alt="Boss" style="width:45%" class="">
+    <h3>IIC2513, curso con mejor evaluación por estudiantes</h3>
+    <p>Encuesta docente 2020-1 permite identificar los cursos mejores y peores evaluados de la Escuela de Ingeniería.</p>
+  </div>
 
 </div>
 </div>
@@ -79,56 +80,46 @@
 <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
 
 <div class="w3-quarter">
-<h2>Grupos</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h2>GRUPOS</h2>
+<p class="bajada">Organizaciones y grupos de desarrollo de nuestra Escuela, encargados de la promoción y ejecución de nuestra misión y visión.</p>
 </div>
 
 <div class="w3-quarter">
 <div class="w3-card w3-white">
-  <img src="/w3images/snow.jpg" alt="Snow" style="width:100%">
+  <img src="https://app-inguc.s3.amazonaws.com/dipre-chico.jpg" alt="Snow" style="width:100%">
   <div class="w3-container">
   <h3>Dipre</h3>
-  <h4>Trade</h4>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
+  <p>La Dirección de Pregrado (DiPre), es la encargada de gestionar y velar por un correcto funcionamiento de los procesos que involucran los grados de licenciatura y título.</p>
   </div>
   </div>
 </div>
 
 <div class="w3-quarter">
 <div class="w3-card w3-white">
-  <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+  <img src="https://app-inguc.s3.amazonaws.com/dictuc-chico.jpg" alt="Lights" style="width:100%">
   <div class="w3-container">
   <h3>Dictuc</h3>
-  <h4>Trade</h4>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
+  <p>Dictuc ha logrado ejecutar de manera sustentable la Misión de la Pontificia Universidad Católica de Chile (UC) de ser el vínculo entre la academia e investigación con la sociedad, mediante la generación de conocimiento y transferencia de tecnología.</p>
+
   </div>
   </div>
 </div>
 
 <div class="w3-quarter">
 <div class="w3-card w3-white">
-  <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+  <img src="https://app-inguc.s3.amazonaws.com/cai-chico.jpg" alt="Mountains" style="width:100%">
   <div class="w3-container">
   <h3>Centro de Alumnos</h3>
-  <h4>Trade</h4>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
+  <p>El Centro de Alumnos de Ingeniería (CAi) es una institución fundada en 1904 con el fin de representar a los alumnos de la Escuela de Ingeniería de la Pontificia Universidad Católica de Chile. En esta página encontrarás toda la información respecto a su actividad.</p>
+
   <a href="/events">
-                                           <button class="btn btn-primary" type="button" >
+                                           <button class="w3-button w3-right w3-theme" type="button" >
                                              VER PRÓXIMOS EVENTOS
                                            </button>
                                        </a>
 
                                        <a href="/projects">
-                                           <button class="btn btn-primary" type="button" >
+                                           <button class="w3-button w3-right w3-theme" type="button" >
                                              INICIATIVAS ESTUDIANTILES
                                            </button>
                                        </a>
@@ -138,10 +129,31 @@
 
 </div>
 
-<!-- Container -->
-<div class="w3-container" style="position:relative">
-  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
-  style="position:absolute;top:-28px;right:24px">+</a>
+<div class="w3-container w3-padding-64 w3-center" id="directorio">
+<h2>DIRECTORIO</h2>
+<p class="bajada">Autoridades de la Escuela de ingeniería UC</p>
+
+<div class="w3-row"><br>
+
+<div class="w3-quarter">
+  <img src="https://app-inguc.s3.amazonaws.com/jc.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Juan Carlos de la Llera</h3>
+  <p>Decano</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="https://app-inguc.s3.amazonaws.com/hube.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Matias Hube</h3>
+  <p>Director de pregrado</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="https://app-inguc.s3.amazonaws.com/gloria.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Gloria Arancibia</h3>
+  <p>Directora de postgrado</p>
+</div>
+
+</div>
 </div>
 
 
@@ -149,29 +161,27 @@
 <div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
   <div class="w3-row">
     <div class="w3-col m5">
-    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contáctanos</span></div>
-      <h3>Address</h3>
-      <p>Swing by for a cup of coffee, or whatever.</p>
-      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Chicago, US</p>
-      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +00 1515151515</p>
-      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  test@test.com</p>
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-yellow w3-bottombar">Contáctanos</span></div>
+      <h3>Avda. Vicuña Mackenna 4860</h3>
+      <p>Pontificia Universidad Católica de Chile</p>
+      <p><i class="fa fa-map-marker w3-text-yellow w3-xlarge"></i> Santiago - Chile</p>
+      <p><i class="fa fa-phone w3-text-yellow w3-xlarge"></i>Mesa Central +56223542000</p>
+      <p><i class="fa fa-envelope-o w3-text-yellow w3-xlarge"></i> contacto@ing.puc.cl</p>
     </div>
     <div class="w3-col m7">
       <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
       <div class="w3-section">
-        <label>Name</label>
+        <label>Nombre</label>
         <input class="w3-input" type="text" name="Name" required>
       </div>
       <div class="w3-section">
-        <label>Email</label>
+        <label>Correo</label>
         <input class="w3-input" type="text" name="Email" required>
       </div>
       <div class="w3-section">
-        <label>Message</label>
+        <label>Mensaje</label>
         <input class="w3-input" type="text" name="Message" required>
       </div>
-      <input class="w3-check" type="checkbox" checked name="Like">
-      <label>I Like it!</label>
       <button type="submit" class="w3-button w3-right w3-theme">Send</button>
       </form>
     </div>
@@ -179,20 +189,20 @@
 </div>
 
 <!-- Image of location/map -->
-<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
+<img src="https://yplqsmdlg-images-1.s3.amazonaws.com/stem.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
-  <h4>Follow Us</h4>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
-  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <h4>Síguenos</h4>
+  <a class="w3-button w3-large w3-yellow" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-yellow" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-yellow" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-yellow" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-yellow w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 
   <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
-    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+    <span class="w3-text w3-padding w3-yellow w3-hide-small">Ir al inicio</span>
     <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
