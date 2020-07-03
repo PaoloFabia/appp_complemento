@@ -21,68 +21,17 @@
 <div class="cabeza-contenedor">
   <div id="titulo-contenedor">
     <h1>EVENTOS CAi</h1>
+    <!-- <% console.log(eventsList) %> -->
   </div>
   <div id="informacion-extra">
-    <% if (!eventsList.length) { %>
+    <% if (eventsList) { %>
       <p>No hay eventos</p>
-      <% if (currentUser) { %>
-        <a href="<%= newEventPath %>">
-          <img src="https://yplqsmdlg-images-1.s3.amazonaws.com/nuevo.png">
-        </a>
-      <% } %>
     <% } else { %>
   </div>
 </div>
 <div class="cuerpo-contenedor">
-  <% eventsList.forEach((event, index) => { %>
-    <div class="contenedor-item">
-      <div class="divnombre">
-        <h1>
-          <%= event.name %>
+  <% JSON.stringify(eventsList)  %>
 
-        </h1>
-      </div>
-      <div class="item-imagenes" id="imagen-objeto">
-        <img src="<%=event.banner%>">
-      </div>
-      <div class="item-imagenes">
-      </div>
-      <div class="piso">
-
-
-        <div id="<%=index%>-BotonInfoExtraEvento">
-          <!-- <img src="https://yplqsmdlg-images-1.s3.amazonaws.com/moreinfo.png"> -->
-        </div>
-
-
-        <!-- Lo que esta escondido y se muestra al presionar el boton -->
-        <div id="<%=index%>-InfoExtraEvento" class="esconder">
-
-            <!-- <div  class="esconder" id="<%=index%>-EsconderInfo"> -->
-              <!-- <img class="menos" src="https://yplqsmdlg-images-1.s3.amazonaws.com/arrow-141-64.png"> -->
-            <!-- </div> -->
-
-
-
-            <h2> <%= event.date %> </h2>
-            <h2> En <%= event.place %> </h2>
-            <h2>Este evento es del tipo <%= event.category %></h2>
-
-            <!-- <a href= "<%= profilePath(event.organizer) %>" > -->
-              <!-- <img id="organizador" src="https://yplqsmdlg-images-1.s3.amazonaws.com/user-64.png"> -->
-            <!-- </a> -->
-
-        </div>
-
-
-
-
-
-
-
-
-      </div>
-    </div>
-    <% }) %>
+  
   </div>
 <% } %>

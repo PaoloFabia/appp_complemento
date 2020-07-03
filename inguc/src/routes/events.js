@@ -10,28 +10,50 @@ async function loadEvent(ctx, next) {
 }
 
 router.get('events.list', '/', async (ctx) => {
+  //   // Solicitamos la data de la API de nuestra CAi App
+  //   const solicitar_token = async () => {
+  //     const url_api = "http://localhost:3000";
+  //     const response = await fetch(url_api + "/api/auth", {
+
+  //         // Adding method type
+  //         method: "POST",
+
+  //         //Identificacion
+  //         body: JSON.stringify({email: "rjanutch@uc.cl", password: "12345"})
+  //     })
+  //     const el_token = await response.json().get("token");
+  //     return el_token;
+  // }
 
     // Solicitamos la data de la API de nuestra CAi App
     const request = async () => {
         const url_api = "http://localhost:3000";
-        const response = await fetch(url_api + "/events", {
+        const response = await fetch(url_api + "/api/events", {
 
             // Adding method type
             method: "GET",
 
             // Adding headers to the request
             headers: {
-                "Accept": "application/json;",
-                "Content-type": "application/json;"
+                "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjY4LCJpYXQiOjE1OTMzOTI2MTd9.Ey_DMDwp-cf1N6mOxXFd-rDWJY86z3wv7NAizWRWWjk;",
             }
         })
-        const data_json = await response.json();
+        const data_json = await response.json().data;
+        console.log(data_json);
         return data_json;
     }
 
   switch (ctx.accepts(['json', 'html'])) {
     case 'html':
+      // const token_recibido = await solicitar_token();
+      // let eventsList = [];
       const eventsList = await request();
+      // console.log(json_event_list);
+
+      // json_event_list.forEach(function (item, index) {
+      //   eventsList.push(item.attributes);
+
+      // });
       await ctx.render('events/index', {
         eventsList,
         profilePath: (organizer) => ctx.router.url('users.profile',{ id: organizer }),
