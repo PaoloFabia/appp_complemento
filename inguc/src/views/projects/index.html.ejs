@@ -1,20 +1,27 @@
 <head>
   <style>
-    .contenedor-item{
-      border: 5px outset gray;
-      background-color: lightblue;
-      text-align: center;
-  }
-  #titulo-contenedor{
-    border: 5px outset gray;
-      background-color: yellow;
-      text-align: center;
-  }
-  h3{
-    size: 400px;
-  }
+  .contenedor-item{
+        background-color: #fbd742;
+        text-align: center;
+
+    }
+    #titulo-contenedor{
+        background-color: white;
+        text-align: center;
+
+    }
+    h1{
+      font-family: sans-serif;
+      font-size:50px;
+
+
+    }
+
+    .cuerpo-contenedor{
+      font-family:sans-serif;
+    }
   </style>
-  
+
 </head>
 
 <div class="cabeza-contenedor">
@@ -24,9 +31,9 @@
   <div id="informacion-extra">
     <% if (!projectsList.length) { %>
       <p>No hay inventario</p>
-      
+
     <% } else { %>
-      
+
   </div>
 
 
@@ -54,7 +61,7 @@
 
       </div>
 
-      
+
 
     </div>
     <% }) %>

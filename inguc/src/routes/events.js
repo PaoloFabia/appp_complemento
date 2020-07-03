@@ -13,7 +13,7 @@ router.get('events.list', '/', async (ctx) => {
 
     // Solicitamos la data de la API de nuestra CAi App
     const request = async () => {
-        const url_api = "http://localhost:3000";
+        const url_api = "https://sheltered-chamber-94902.herokuapp.com";
         const response = await fetch(url_api + "/events", {
 
             // Adding method type

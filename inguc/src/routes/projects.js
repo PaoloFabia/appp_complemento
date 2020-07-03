@@ -13,22 +13,22 @@ router.get('projects.list', '/', async (ctx) => {
 
   // Solicitamos la data de la API de nuestra CAi App
   const request = async () => {
-    const url_api = "http://localhost:3000";
-    const response = await fetch(url_api + "/projects", { 
-      
-        // Adding method type 
-        method: "GET", 
+    const url_api = "https://sheltered-chamber-94902.herokuapp.com";
+    const response = await fetch(url_api + "/projects", {
 
-        // Adding headers to the request 
-        headers: { 
+        // Adding method type
+        method: "GET",
+
+        // Adding headers to the request
+        headers: {
             "Accept": "application/json;",
             "Content-type": "application/json;"
-        } 
+        }
     })
     const data_json = await response.json();
     return data_json;
 }
-  
+
 
   switch (ctx.accepts(['json', 'html'])) {
     case 'html':
