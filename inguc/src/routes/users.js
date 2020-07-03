@@ -13,31 +13,31 @@ router.get('users.list', '/', async (ctx) => {
 
     // Solicitamos la data de la API de nuestra CAi App
     const request = async () => {
-        const url_api = "http://localhost:3000";
-        
-        const response = await fetch(url_api + "/api/users", { 
+        const url_api = "https://sheltered-chamber-94902.herokuapp.com";
 
-            
-        
-            // Adding method type 
-            method: "GET", 
+        const response = await fetch(url_api + "/users", {
 
-            // Adding headers to the request 
-            headers: { 
+
+
+            // Adding method type
+            method: "GET",
+
+            // Adding headers to the request
+            headers: {
                 "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjY4LCJpYXQiOjE1OTMzOTI2MTd9.Ey_DMDwp-cf1N6mOxXFd-rDWJY86z3wv7NAizWRWWjk;"
-            } 
+            }
         })
         const data_json = await response;
         return data_json;
     }
-  
+
 
   switch (ctx.accepts(['json', 'html'])) {
     case 'html':
       const usersList = await request();
       await ctx.render('users/index', {
         usersList,
-    
+
         newUserPath: ctx.router.url('users.new'),
         editUserPath: (user) => ctx.router.url('users.edit', { id: user.id }),
         deleteUserPath: (user) => ctx.router.url('users.delete', { id: user.id }),

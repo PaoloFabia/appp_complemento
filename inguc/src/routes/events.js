@@ -10,21 +10,6 @@ async function loadEvent(ctx, next) {
 }
 
 router.get('events.list', '/', async (ctx) => {
-  //   // Solicitamos la data de la API de nuestra CAi App
-  //   const solicitar_token = async () => {
-  //     const url_api = "http://localhost:3000";
-  //     const response = await fetch(url_api + "/api/auth", {
-
-  //         // Adding method type
-  //         method: "POST",
-
-  //         //Identificacion
-  //         body: JSON.stringify({email: "rjanutch@uc.cl", password: "12345"})
-  //     })
-  //     const el_token = await response.json().get("token");
-  //     return el_token;
-  // }
-
     // Solicitamos la data de la API de nuestra CAi App
     const request = async () => {
         const url_api = "https://sheltered-chamber-94902.herokuapp.com";
