@@ -1,0 +1,36 @@
+@import "./../variables";
+//Este contiene la info arriba
+.cabeza-contenedor{
+
+    position: relative;
+    left: 0px;
+
+    background-color: red;
+}
+h1{
+    color: red;
+}
+
+.contenedor-item{
+
+    .piso{
+        // background: $color-body-fondo;
+        text-align: left;
+        margin-left: 100px ;
+        // text-color: white;
+        .esconder {
+            display: none;
+            color:white;
+
+        }
+        #organizador{
+            width: 30px;
+            height: 30px;
+        }
+        .menos{
+            width: 40px;
+            height: 40px;
+        }
+
+    }
+}

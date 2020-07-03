@@ -1,0 +1,30 @@
+.cabeza-contenedor {
+  position: relative;
+  left: 0px;
+  background-color: red;
+}
+
+h1 {
+  color: red;
+}
+
+.contenedor-item .piso {
+  text-align: left;
+  margin-left: 100px;
+}
+
+.contenedor-item .piso .esconder {
+  display: none;
+  color: white;
+}
+
+.contenedor-item .piso #organizador {
+  width: 30px;
+  height: 30px;
+}
+
+.contenedor-item .piso .menos {
+  width: 40px;
+  height: 40px;
+}
+/*# sourceMappingURL=events.css.map */

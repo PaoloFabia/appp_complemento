@@ -1,0 +1,119 @@
+.cabeza-contenedor {
+  position: relative;
+  left: 0px;
+  background-color: red;
+}
+
+.cabeza-contenedor #titulo-contenedor {
+  border-radius: 10px;
+}
+
+.cabeza-contenedor #titulo-contenedor h1 {
+  color: #FFD700;
+  text-align: center;
+  text-shadow: 2px 2px 4px #1c1b1b;
+  font-weight: bolder;
+  font-family: "Poppins";
+  font-size: 55px;
+}
+
+.cabeza-contenedor #informacion-extra {
+  background-color: #292929;
+}
+
+.cabeza-contenedor #informacion-extra p {
+  position: relative;
+  background-color: #292929;
+}
+
+.cabeza-contenedor #informacion-extra a, .cabeza-contenedor #informacion-extra img {
+  position: absolute;
+  left: 75px;
+  top: 15px;
+  width: 45px;
+  height: 45px;
+}
+
+.cuerpo-contenedor {
+  background-color: #292929;
+  padding-left: 0;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.contenedor-item {
+  display: inline-block;
+  background-color: #292929;
+  min-width: 320px;
+  max-width: 380px;
+  width: calc(100% * (1/3) - 10px - 1px);
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.contenedor-item .divnombre, .contenedor-item h3 {
+  height: 60px;
+  color: white;
+  background-color: transparent;
+  font-size: 28px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px;
+}
+
+.contenedor-item .item-imagenes {
+  display: inline-block;
+}
+
+.contenedor-item .item-imagenes .acciones #eliminar, .contenedor-item .item-imagenes .acciones input {
+  position: absolute;
+  left: 275px;
+  top: 180px;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+}
+
+.contenedor-item .item-imagenes .acciones #editar, .contenedor-item .item-imagenes .acciones img {
+  position: absolute;
+  left: 275px;
+  top: 220px;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+}
+
+.contenedor-item #imagen-objeto {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.contenedor-item #imagen-objeto, .contenedor-item img {
+  background-color: #292929;
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-top: 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  width: 200px;
+  height: 200px;
+}
+
+.contenedor-item .piso {
+  display: inline-block;
+  background: #292929;
+  text-align: left;
+  margin-top: 20px;
+  max-width: 190px;
+  margin-left: 100px;
+}
+
+.contenedor-item .piso a, .contenedor-item .piso img {
+  position: relative;
+  width: 178px;
+  height: 50px;
+  top: -10px;
+  left: -20px;
+}
+/*# sourceMappingURL=proyects.css.map */
