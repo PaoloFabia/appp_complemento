@@ -35,11 +35,10 @@ router.get('events.list', '/', async (ctx) => {
 
             // Adding headers to the request
             headers: {
-                "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjY4LCJpYXQiOjE1OTMzOTI2MTd9.Ey_DMDwp-cf1N6mOxXFd-rDWJY86z3wv7NAizWRWWjk;",
+                "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjY4LCJpYXQiOjE1OTMzOTI2MTd9.Ey_DMDwp-cf1N6mOxXFd-rDWJY86z3wv7NAizWRWWjk",
             }
         })
-        const data_json = await response.json().data;
-        console.log(data_json);
+        const data_json = await response.json();
         return data_json;
     }
 
